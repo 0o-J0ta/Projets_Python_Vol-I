@@ -1,0 +1,170 @@
+print('-'*60)
+print("                       CALCULADORA")
+print('-'*60)
+    
+while True : 
+    print("   ") 
+    OP=int(input("Digite qual operação matematica deseja ultilizar: \n"
+    "\n[1]-Soma\n"
+    "\n[2]-Subtração\n"
+    "\n[3]-Divisão\n"
+    "\n[4]-Multiplicaçao\n"
+    "\n[5]-Sair\n"
+    "\n \n"
+    "\nResposta: "))
+    print("  ")
+        
+    while OP>=6: 
+        print("erro")
+        print("  ")
+        print('\033[31mPor Favor Coloque uma Opcao valida\n'
+        '\n \n')
+            
+        OP=int(input("\033[0;0mDigite qual operação matematica deseja ultilizar: \n"
+        "\n[1]-Soma\n"
+        "\n[2]-Subtração\n"
+        "\n[3]-Divisão\n"
+        "\n[4]-Multiplicação\n"
+        "\n[5]-Sair\n"
+        "\n \n"
+        "\nResposta: "))   
+        print("  ")  
+        
+    if OP == 1:
+        print("\033[32mOK")
+        print("  ")
+        quant = int(input('\033[0;0mQuantos números você quer Somar? '))
+
+        resultado = 0
+
+        for x in range(quant):
+        
+            num0 = float(input('Digite um número: '))
+
+            resultado = resultado + num0
+
+        print('Resultado: {}'.format(resultado))
+
+        print("  ")
+        fim=int(input("Deseja continuar? \n"
+                        "\n[1]-Sim\n"
+                        "\n[2]-Não\n"
+                        "\nResposta: "))
+
+        if fim == 1:
+                print("\033[32mOk\033[0;0m")
+
+        elif fim == 2:
+                print("\033[31mOK\033[0;0m")
+                break
+        
+        
+    elif OP == 2:
+        print("\033[32mOK")
+        print("  ")
+        quant = int(input('\033[0;0mQuantos números você quer Subtrair? '))
+
+        numeros=[]
+
+        for x in range(quant):
+        
+            num = float(input('Digite um número: '))
+            numeros.append(num)
+        
+            numeros.sort(reverse=True)
+            
+            resultado0 = numeros[0]
+            
+            for num in numeros[1:]:
+                resultado0 = resultado0 - num
+        
+        print('Resultado: {}'.format(resultado0))
+        print("  ")
+        fim=int(input("Deseja continuar? \n"
+                        "\n[1]-Sim\n"
+                        "\n[2]-Não\n"
+                        "\nResposta: "))
+
+        if fim == 1:
+                print("\033[32mOk\033[0;0m")
+
+        elif fim == 2:
+                print("\033[31mOK\033[0;0m")
+                break
+                
+    elif OP == 3:
+        print("\033[32mOK")
+        for div in range(0,1):
+        
+        
+        
+            num2 = float(input('\033[0;0mDigite o Dividendo: '))
+            
+            num3 = float(input('Digite o Divisor: '))
+            
+            
+            resultado1 = num2 / num3
+            
+            
+            
+        print('Resultado: {}'.format(resultado1))
+        print("  ")
+        fim=int(input("Deseja continuar? \n"
+                        "\n[1]-Sim\n"
+                        "\n[2]-Não\n"
+                        "\nResposta: "))
+
+        if fim == 1:
+                print("\033[32mOk\033[0;0m")
+
+        elif fim == 2:
+                print("\033[31mOK\033[0;0m")
+                break
+            
+    elif OP == 4:
+        print("\033[32mOK")
+        print("   ")
+        num3=float(input('\033[0;0mDigite o numero que deseja multiplicar: '))
+
+        num4=float(input('Digite o numero que deseja multiplicar: '))
+
+        resposta= num4 * num3
+
+        print("Resultado:{}".format(resposta))
+        print("   ")
+
+        print("Tabuada do primiro numero")
+
+
+        for x in range(1,11):
+            resultado= x * num3
+            
+            print("{} x {:.1f} = {}".format(x,num3,resultado))
+
+        print("  ")
+
+        print("Tabuada do segundo numero")
+
+
+        for x in range(1,11):
+            resultado= x * num4
+            
+            print("{} x {:.1f} = {}".format(x,num4,resultado))
+        
+        print("  ")
+        fim=int(input("Deseja continuar? \n"
+                        "\n[1]-Sim\n"
+                        "\n[2]-Não\n"
+                        "\nResposta: "))
+
+        if fim == 1:
+                print("\033[32mOk\033[0;0m")
+
+        elif fim == 2:
+                print("\033[31mOK\033[0;0m")
+                break
+
+            
+    elif OP == 5:
+        print("\033[31mOK")
+        print("Encerrando...")
